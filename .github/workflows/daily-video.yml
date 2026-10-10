@@ -1,9 +1,0 @@
-name: Daily Islamic Video
-"on":
-workflow_dispatch:
-jobs:
-test:
-runs-on: ubuntu-latest
-steps:
-- name: Test workflow
-run: echo "Beauty of Islam 571 AD - Workflow OK"
