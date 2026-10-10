@@ -1,0 +1,29 @@
+name: Daily Islamic Video
+
+on:
+schedule:
+- cron: "0 3 * * *"
+workflow_dispatch:
+
+permissions:
+contents: read
+
+concurrency:
+group: daily-islamic-video
+cancel-in-progress: false
+
+jobs:
+prepare:
+runs-on: ubuntu-latest
+timeout-minutes: 10
+
+steps:
+  - name: Checkout project
+    uses: actions/checkout@v4
+
+  - name: Test daily schedule
+    run: |
+      echo "Beauty of Islam 571 AD"
+      echo "Daily video workflow started."
+      echo "Schedule: 6:00 AM Riyadh time"
+      echo "Video generation and social media publishing are not connected yet."
