@@ -1,0 +1,20 @@
+
+name: Generate Urdu Voice
+
+on:
+  workflow_dispatch:
+    inputs:
+      script_text:
+        description: "Urdu voice mein jo text bolwana hai"
+        required: true
+        default: "خوش آمدید! آپ کا دن اچھا گزرے۔"
+
+jobs:
+  generate_audio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check workflow
+        run: |
+          echo "Workflow sahi tarah start ho gaya."
+          echo "Agla step website ke API ko connect karna hai."
+          
